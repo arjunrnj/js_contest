@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>New Employee</h2>
+    <table>
+      <tr>
+          <td>
+              <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                  <!-- <div>
+                      <label>Id</label>
+                      <input type="text" name="ID" id="id">
+                  </div> -->
+                  <div>
+                      <label>Name</label>
+                      <input type="text" name="name" id="name">
+                  </div>
+                  <div>
+                      <label>Profession</label>
+                      <input type="text" name="profession" id="profession">
+                  </div>
+                  <div>
+                      <label>Age</label>
+                      <input type="text" name="age" id="age">
+                  </div>
+                  <div  class="form-action-buttons">
+                      <input type="submit" value="Add User">
+                  </div>
+              </form>
+          </td>
+          <td>
+              <table class="list" id="employeeList">
+                <h3>Added Employee</h3>
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>Profession</th>
+                          <th>Age</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+              </table>
+          </td>
+          
+      </tr>
+  </table>
+  <label class="validation-error hide" id="nameValidationError">Error: Please make sure all the fields are filled before adding in an employee!</label>
+  <script src="script.js"></script>
+  </body>
+</html>
